@@ -9,13 +9,24 @@ var shell = $(".shell")
 
 var fs = {
   projects: {
-    "memoir.txt": "co-founder of VC-backed tech enabled chronic pain platform",
-    "rewind.txt":
-      "lead product, bridging the digital & analogue in diabetes reversal",
-    "athenahealth.txt":
-      "my first job. started as a data scientist, ended up a TPM",
-    "brighthealth.txt": "PM building virtual pharma offering",
+    "E-commerce Backend": "https://github.com/mrx-arafat/e-commmerce-backend",
+    "Simple Python Web-Crawler":
+      "https://github.com/mrx-arafat/KingBOB-WebCrawler",
+    "RSA For CSE429": "https://github.com/mrx-arafat/RSA-for-CSE429",
+    "Saved-Wifi-Passwords Grabber":
+      "https://github.com/mrx-arafat/Grab-Saved-Wifi-Passwords",
+    "Decrypt Chrome Passwords":
+      "https://github.com/mrx-arafat/decrypt-chrome-passwords",
+    "Web Bypassing 403 (dos2unix)":
+      "https://github.com/mrx-arafat/Web-403-Bypass-dos2unix",
     other: {
+      "memoir.txt":
+        "co-founder of VC-backed tech enabled chronic pain platform",
+      "rewind.txt":
+        "lead product, bridging the digital & analogue in diabetes reversal",
+      "athenahealth.txt":
+        "my first job. started as a data scientist, ended up a TPM",
+      "brighthealth.txt": "PM building virtual pharma offering",
       "misc-work": {
         "tachy.txt": "investing at the intersection of health & social",
         "advisor-roles.txt": "UCSF health hub, Affect",
@@ -80,21 +91,17 @@ var commands = {
   whoami: function () {
     this.echo("\nOh hi there!");
     this.echo(
-      "I'm Arafat, manager of products / researcher of experience / sciencer of data /"
+      "I'm Arafat, a cybersecurity researcher and junior penetration tester."
     );
-    this.echo("amateur of countless hobbies");
-    this.echo("");
     this.echo(
-      "I’ve been enamored with computers and tech since a youngin. It started with programming AIM spam bots in VB, building Wordpress sites in high school, and eventually finding my way to data intensive product building."
+      "I specialize in web application security, penetration testing, and cybersecurity research."
     );
     this.echo("");
     this.echo(
-      "I currently lead product at <a href='http://joinrewind.com'>Rewind</a></strong>",
-      { raw: true }
+      "I have a solid background in various domains of cybersecurity including web penetration, networking, digital forensics, and OSINT."
     );
     this.echo(
-      "I'm located between SF and BOS with proficiency in DATEPART(TZoffset, SYSDATETIMEOFFSET()) ",
-      { raw: true }
+      "I have successfully organized international and national cybersecurity events, contributing significantly to the cybersecurity community."
     );
     this.echo("");
   },
@@ -127,26 +134,26 @@ var commands = {
   },
   resume: function () {
     this.echo(
-      "\t[[b;#aaa;]Head of Product]                    rewind          '21-pres"
+      "\t[[b;#aaa;]Junior Penetration Tester & Operational Lead]      Various Roles      '20-pres"
     );
     this.echo(
-      "\t[[b;#aaa;]Lead Product Manager]               bright health   '20-'21"
+      "\t[[b;#aaa;]President]                            MIST Cyber Security Club      '23-'24"
     );
     this.echo(
-      "\t[[b;#aaa;]Co-Founder / Head of Product]       memoir health   '17'-'20"
+      "\t[[b;#aaa;]Event Organizer]                      MIST Leetcon 2023: HackMeIfYouCan      '23"
     );
     this.echo(
-      "\t[[b;#aaa;]Senior Data Scientist]              athenahealth    '15'-'17"
+      "\t[[b;#aaa;]Web Developer (Part-Time)]            NITRO9      '21"
     );
   },
   contact: function () {
     this.echo("");
     this.echo(
-      "<strong><a href='https://www.arafat.com/www.linkedin.com/in/syedarafat/' style='color:red;'>LinkedIn</a></strong>",
+      "<strong><a href='https://www.linkedin.com/in/e4rafat/' style='color:red;'>LinkedIn</a></strong>",
       { raw: true }
     );
     this.echo(
-      "<strong><a href='mailto:me@arafat.com' style='color:red;' >email</a></strong>",
+      "<strong><a href='mailto:e4rafat@gmail.com' style='color:red;'>Email</a></strong>",
       { raw: true }
     );
     this.echo("");
@@ -284,13 +291,19 @@ function showHelp(consoleObj) {
       "Used a terminal before? There are a few easter eggs in here too :) \n"
     )
   );
+  consoleObj.echo("PROTIP: press <tab> to trigger autocompletion");
+
   consoleObj.echo("\t[[b;#aaa;]ls,cat,???]    this is a terminal emulator");
-  consoleObj.echo("\t[[b;#aaa;]whoami]        fairly cringy bio");
+  consoleObj.echo("\t[[b;#aaa;]ls]            to see the list of dir");
+  consoleObj.echo("\t[[b;#aaa;]cd]            e.g. type: cd projects ");
+  consoleObj.echo(
+    "\t[[b;#aaa;]cat]           see what into that file e.g. cat 'Saved-Wifi-Passwords Grabber' "
+  );
+  consoleObj.echo("\t[[b;#aaa;]whoami]        just my simple bio");
   consoleObj.echo("\t[[b;#aaa;]contact]       get in touch");
   consoleObj.echo("\t[[b;#aaa;]resume]        list based bio");
   consoleObj.echo("\t[[b;#aaa;]clear]         if things get messy");
   consoleObj.echo("\t[[b;#aaa;]help]          if you get lost.");
   consoleObj.echo("\t[[b;#aaa;]credits]       where it's due");
   consoleObj.echo("");
-  consoleObj.echo("PROTIP: press <tab> to trigger autocompletion");
 }

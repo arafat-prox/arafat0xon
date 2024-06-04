@@ -1,30 +1,45 @@
+/* General styles */
+.body-2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", monospace;
+}
+
+/* Form styles */
 form {
   margin: 10px;
 }
 
+/* Shell styles */
 body .shell {
-  width: 95vw; /* test */
-  height: 95vh; /* test */
+  width: 95vw;
+  height: 95vh;
 }
+
 body .shell .terminal {
   height: calc(100% - 29px);
   padding: 10px;
   --size: 1.1;
   padding-bottom: 0;
 }
+
 body .shell .terminal .cmd {
   margin-bottom: 10px;
 }
+
 .shell .typed-cursor,
 .shell .cursor {
   background: transparent;
 }
+
 .shell > .status-bar .title {
   cursor: move;
 }
+
 .shell.windows .status-bar .title {
   right: 106px;
 }
+
 @supports (--css: variables) {
   .shell .terminal {
     --color: #aaa;
@@ -49,40 +64,130 @@ body .shell .terminal .cmd {
     --color: #aaa;
   }
 }
+
 .cmd span.cursor {
   animation: none;
   width: auto;
   background-color: var(--background, #000);
 }
+
 .shell:not(.light) terminal.content,
 .shell.osx.dark .content,
 .shell.ubuntu:not(.light) .content {
   background-color: var(--background, #222) !important;
 }
+
 .shell .terminal.content {
   font-size: 12px;
 }
+
 .cmd {
   background-color: inherit;
 }
+
 @supports (--css: variables) {
   .shell .terminal.content {
     font-size: calc(var(--size, 1) * 12px);
   }
 }
+
 .terminal > .resizer,
 .terminal > .font .resizer {
   visibility: visible;
   pointer-events: none;
 }
+
 .terminal::-webkit-scrollbar-track {
   border: 1px solid var(--color, #aaa);
   background-color: var(--background);
 }
+
 .terminal::-webkit-scrollbar {
   width: 10px;
   background-color: var(--background);
 }
+
 .terminal::-webkit-scrollbar-thumb {
   background-color: var(--color, #aaa);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .html-embed-3.mobile {
+    display: none;
+  }
+  .html-embed-3.desktop {
+    display: none;
+  }
+
+  .hero-image-div {
+    text-align: center;
+    padding: 10% 10%;
+  }
+
+  .hero-portrait {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* For larger screens, show the terminals */
+@media (min-width: 769px) {
+  .html-embed-3.mobile {
+    display: none;
+  }
+
+  .html-embed-3.desktop {
+    display: block;
+  }
+
+  .hero-image-div {
+    text-align: right;
+    padding: 20px;
+  }
+
+  .hero-portrait {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* Adjust padding and layout for all devices */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-copy-div {
+  text-align: center;
+  margin: 20px;
+}
+
+.hero-paragraph {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.about-me-paragraph {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.social-icon-div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
