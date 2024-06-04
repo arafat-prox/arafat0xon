@@ -157,19 +157,23 @@ body .shell .terminal .cmd {
 /* Adjust padding and layout for all devices */
 .hero-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .hero-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .hero-copy-div {
-  text-align: center;
+  text-align: left;
   margin: 20px;
+  flex: 1;
 }
 
 .hero-paragraph {
@@ -190,4 +194,43 @@ body .shell .terminal .cmd {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.hero-section .hero-image-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-portrait {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+.footer-social {
+  margin-top: 20px;
+}
+
+.social-icon-div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 24px; /* Adjust size as needed */
+  color: #000; /* Black color */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0073b1; /* Change color on hover */
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px 0;
+  color: #aaa;
+  font-family: "Courier New", monospace;
 }
