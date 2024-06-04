@@ -150,6 +150,7 @@ body .shell .terminal .cmd {
   .hero-portrait {
     width: 100%;
     height: auto;
+    padding-left: 4px;
     border-radius: 10px;
   }
 }
